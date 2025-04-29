@@ -1,20 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/cloud-settings-machines/',
   plugins: [react()],
-  server: {
-    port: 3000,
-    host: true,
-    strictPort: true
-  },
+  base: '/cloud-settings-machines/',
   build: {
-    outDir: 'dist',
-    sourcemap: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', '@fluentui/react-components']
+    outDir: 'dist'
   }
 });
