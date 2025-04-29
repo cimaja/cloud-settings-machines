@@ -2,6 +2,8 @@
 
 A modern web application foundation built with Fluent UI v2, React, and Vite. This project provides a solid starting point for building beautiful, accessible, and responsive web applications using Microsoft's Fluent Design System.
 
+https://cimaja.github.io/cloud-settings-machines/
+
 ## Features
 
 - 🎨 **Fluent UI v2 Components** - Full access to Microsoft's modern design system
