@@ -209,12 +209,12 @@ const App = () => {
                       style={{ fontWeight: 600 }}
                       info={
                         <>
-                          When enabled, the machine will reuse existing Windows sessions for attended desktop flow runs.
+                          When enabled, Power Automate will reuse an existing Windows session instead of creating a new one for each unattended run.
                           <br /><br />
                           Default: On
                           <br /><br />
                           <Link
-                            href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/run-desktop-flow#reuse-windows-session"
+                            href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/run-unattended-desktop-flows#reuse-a-windows-session-in-unattended-mode"
                             target="_blank"
                           >
                             Learn more about Windows session reuse
@@ -229,9 +229,6 @@ const App = () => {
                       onChange={(e) => setWindowsSessionEnabled(e.target.checked)}
                     />
                   </div>
-                  <Body1 className={styles.description}>
-                    Reuse existing Windows sessions for attended desktop flow runs
-                  </Body1>
                 </div>
 
                 {/* Maintenance Mode Setting */}
@@ -298,7 +295,7 @@ const App = () => {
 
             {/* Unattended Bots Section */}
             <div className={styles.section} style={{ marginTop: '16px' }}>
-              <Body1Strong>Unattended bots</Body1Strong>
+              <Body1Strong>Unattended capacity</Body1Strong>
               <div className={styles.settingsContainer}>
                 <div className={styles.settingRow}>
                   <div className={styles.settingHeader}>
@@ -374,7 +371,7 @@ const App = () => {
                             }}
                           />
                           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <Body1>Available bots in environment</Body1>
+                            <Body1>Available capacity in environment</Body1>
                             <Body1Strong style={{ color: tokens.colorBrandForeground1 }}>{availableBots}</Body1Strong>
                           </div>
                         </div>
