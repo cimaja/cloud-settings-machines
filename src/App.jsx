@@ -15,6 +15,7 @@ import {
   DrawerHeaderTitle,
   DrawerBody,
   DrawerFooter,
+  MessageBar,
   useRestoreFocusSource,
   useRestoreFocusTarget,
   SpinButton,
@@ -187,6 +188,13 @@ const App = () => {
                           Enable this setting to allow Microsoft Copilot Studio to interact with websites and desktop applications through automated clicking and typing. This machine will be dedicated to computer interactions, and other automation settings will be disabled. Disable this setting if you want to use this machine for standard desktop flows without computer interactions.
                           <br /><br />
                           Default: Off
+                          <br /><br />
+                          <Link
+                            href="https://go.microsoft.com/fwlink/?linkid=2316802"
+                            target="_blank"
+                          >
+                            Learn more about computer use
+                          </Link>
                         </>
                       }
                       label="Enable computer use"
@@ -197,9 +205,25 @@ const App = () => {
                     />
                   </div>
                   <Text className={styles.description}>
-                    Allows Microsoft Copilot agents to perform tasks in websites and desktop applications. Turn this setting off if you want to use this machine for desktop flows.
+                    Computer use enables Microsoft Copilot agents to perform UI automation using agentic capabilities. Turn this setting off if you want to use this machine for desktop flows.
                   </Text>
                 </div>
+
+                {computerUseEnabled && (
+                  <div style={{ margin: '0 16px', marginTop: tokens.spacingVerticalS }}>
+                    <MessageBar
+                      layout="multiline"
+                      style={{
+                        backgroundColor: tokens.colorNeutralBackground2,
+                        maxWidth: '100%',
+                      }}
+                    >
+                      <Text wrap style={{ maxWidth: '100%' }}>
+                        These settings are disabled because the machine is configured for computer use.
+                      </Text>
+                    </MessageBar>
+                  </div>
+                )}
 
                 {/* Reuse Windows Session Setting */}
                 <div className={styles.settingRow}>
