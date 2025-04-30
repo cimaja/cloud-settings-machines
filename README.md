@@ -1,6 +1,6 @@
-# Fluent Foundation
+# Machine Settings
 
-A modern web application foundation built with Fluent UI v2, React, and Vite. This project provides a solid starting point for building beautiful, accessible, and responsive web applications using Microsoft's Fluent Design System.
+A web application for managing machine settings, built with Fluent UI v2, React, and Vite. This project provides a user-friendly interface for configuring and managing machine settings.
 
 https://cimaja.github.io/cloud-settings-machines/
 
@@ -17,8 +17,8 @@ https://cimaja.github.io/cloud-settings-machines/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/cimaja/fluent-foundation.git
-   cd fluent-foundation
+   git clone https://github.com/cimaja/cloud-settings-machines.git
+   cd cloud-settings-machines
    ```
 
 2. Install dependencies:
@@ -42,7 +42,7 @@ https://cimaja.github.io/cloud-settings-machines/
 ## Project Structure
 
 ```
-fluent-foundation/
+machine-settings/
 ├── src/
 │   ├── App.jsx          # Main application component
 │   └── main.jsx         # Application entry point

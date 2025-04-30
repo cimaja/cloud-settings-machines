@@ -1,7 +1,7 @@
 {
-  "name": "fluent-foundation",
+  "name": "machine-settings",
   "version": "1.0.0",
-  "description": "A web project using Fluent 2 design system",
+  "description": "Machine settings web application",
   "main": "index.js",
   "type": "module",
   "scripts": {
