@@ -244,7 +244,7 @@ const App = () => {
                           Default: Off
                           <br /><br />
                           <Link
-                            href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/manage-machines#maintenance-mode"
+                            href="https://learn.microsoft.com/en-us/power-automate/desktop-flows/manage-machines#maintenance-mode-for-machines"
                             target="_blank"
                           >
                             Learn more about maintenance mode
