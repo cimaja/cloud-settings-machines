@@ -308,7 +308,7 @@ const App = () => {
                           Default: On
                         </>
                       }
-                      label="Auto-allocation"
+                      label={<Body1Strong>Auto-allocation</Body1Strong>}
                     />
                     <Switch
                       checked={autoAllocationEnabled}
