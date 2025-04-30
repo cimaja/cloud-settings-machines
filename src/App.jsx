@@ -86,7 +86,8 @@ const useStyles = makeStyles({
     fontWeight: tokens.fontWeightSemibold,
   },
   settingTitle: {
-    flex: 1,
+    flex: 'none',
+    width: 'fit-content',
   },
   description: {
     color: tokens.colorNeutralForeground3,
@@ -176,22 +177,24 @@ const App = () => {
                 <div className={styles.settingRow}>
                   <div className={styles.settingHeader}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flex: 1 }}>
-                      <span style={{ fontWeight: 600 }}>Enable computer use</span>
-                      <InfoButton
-                        content={
+                      <InfoLabel
+                        className={styles.settingTitle}
+                        style={{ fontWeight: 600, width: 'fit-content' }}
+                        info={
                           <>
-                            Enable this setting to allow Microsoft Copilot Studio to interact with websites and desktop applications through automated clicking and typing. This machine will be dedicated to computer interactions, and other automation settings will be disabled. Disable this setting if you want to use this machine for standard desktop flows without computer interactions.
-                            <br /><br />
-                            Default: Off
-                            <br /><br />
-                            <Link
-                              href="https://go.microsoft.com/fwlink/?linkid=2316802"
-                              target="_blank"
-                            >
-                              Learn more about computer use
-                            </Link>
+                              Enable this setting to allow Microsoft Copilot Studio to interact with websites and desktop applications through automated clicking and typing. This machine will be dedicated to computer interactions, and other automation settings will be disabled. Disable this setting if you want to use this machine for standard desktop flows without computer interactions.
+                              <br /><br />
+                              Default: Off
+                              <br /><br />
+                              <Link
+                                href="https://go.microsoft.com/fwlink/?linkid=2316802"
+                                target="_blank"
+                              >
+                                Learn more about computer use
+                              </Link>
                           </>
                         }
+                        label="Enable computer use"
                       />
                       <Badge appearance="tint" color="informative" size="small">Preview</Badge>
                     </div>
@@ -402,15 +405,16 @@ const App = () => {
               </div> {/* End Unattended bots settingsContainer */}
             </div> {/* End Unattended bots section */}
           </div> {/* End content */}
-        </DrawerBody>
-        <DrawerFooter className={styles.footer}>
-          <Button appearance="primary">Save</Button>
-          <Button appearance="secondary">Cancel</Button>
-        </DrawerFooter>
-      </OverlayDrawer>
-    </div>
-  );
-};
+          </DrawerBody>
+          <DrawerFooter className={styles.footer}>
+            <Button appearance="primary">Save</Button>
+            <Button appearance="secondary">Cancel</Button>
+          </DrawerFooter>
+        </OverlayDrawer>
+      </div>
+    );
+  };
+
 
 export default App;
 
