@@ -215,7 +215,7 @@ const App = () => {
                       }}
                     >
                       <Text wrap style={{ maxWidth: '100%' }}>
-                        These settings are disabled because the machine is configured for computer use.
+                        These settings do not apply because the machine is configured for computer use.
                       </Text>
                     </MessageBar>
                   </div>
