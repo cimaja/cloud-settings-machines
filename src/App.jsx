@@ -27,7 +27,8 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'center',
     height: '100vh',
     backgroundColor: tokens.colorNeutralBackground2,
     ...shorthands.padding(tokens.spacingVerticalM),
