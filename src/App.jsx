@@ -9,6 +9,7 @@ import {
   Switch,
   Button,
   Text,
+  Badge,
   InfoButton,
   OverlayDrawer,
   DrawerHeader,
@@ -172,33 +173,28 @@ const App = () => {
               <Body1Strong>General</Body1Strong>
               <div className={styles.settingsContainer}>
                 {/* Enable Computer Use Setting */}
-                <div 
-                  className={styles.settingRow} 
-                  style={{
-                    borderBottom: `1px solid ${tokens.colorNeutralStroke2}`,
-                    paddingBottom: tokens.spacingVerticalM,
-                  }}
-                >
+                <div className={styles.settingRow}>
                   <div className={styles.settingHeader}>
-                    <InfoLabel
-                      className={styles.settingTitle}
-                      style={{ fontWeight: 600 }}
-                      info={
-                        <>
-                          Enable this setting to allow Microsoft Copilot Studio to interact with websites and desktop applications through automated clicking and typing. This machine will be dedicated to computer interactions, and other automation settings will be disabled. Disable this setting if you want to use this machine for standard desktop flows without computer interactions.
-                          <br /><br />
-                          Default: Off
-                          <br /><br />
-                          <Link
-                            href="https://go.microsoft.com/fwlink/?linkid=2316802"
-                            target="_blank"
-                          >
-                            Learn more about computer use
-                          </Link>
-                        </>
-                      }
-                      label="Enable computer use"
-                    />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flex: 1 }}>
+                      <span style={{ fontWeight: 600 }}>Enable computer use</span>
+                      <InfoButton
+                        content={
+                          <>
+                            Enable this setting to allow Microsoft Copilot Studio to interact with websites and desktop applications through automated clicking and typing. This machine will be dedicated to computer interactions, and other automation settings will be disabled. Disable this setting if you want to use this machine for standard desktop flows without computer interactions.
+                            <br /><br />
+                            Default: Off
+                            <br /><br />
+                            <Link
+                              href="https://go.microsoft.com/fwlink/?linkid=2316802"
+                              target="_blank"
+                            >
+                              Learn more about computer use
+                            </Link>
+                          </>
+                        }
+                      />
+                      <Badge appearance="tint" color="informative" size="small">Preview</Badge>
+                    </div>
                     <Switch
                       checked={computerUseEnabled}
                       onChange={(e) => setComputerUseEnabled(e.target.checked)}
@@ -402,10 +398,10 @@ const App = () => {
                       </div>
                     </div>
                   )}
-                </div> { /* End Auto-allocation settingRow */}
-              </div> { /* End Unattended bots settingsContainer */}
-            </div> { /* End Unattended bots section */}
-          </div> { /* End content */}
+                </div> {/* End Auto-allocation settingRow */}
+              </div> {/* End Unattended bots settingsContainer */}
+            </div> {/* End Unattended bots section */}
+          </div> {/* End content */}
         </DrawerBody>
         <DrawerFooter className={styles.footer}>
           <Button appearance="primary">Save</Button>
@@ -417,3 +413,4 @@ const App = () => {
 };
 
 export default App;
+
